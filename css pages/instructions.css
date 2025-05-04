@@ -1,0 +1,239 @@
+body {
+    font-family: 'Heebo', sans-serif; /* הגדרת פונט 'Heebo' לכל הדף */
+    margin: 0; /* מבטל את השוליים של הדף */
+    padding: 0; /* מבטל את הריפוד של הדף */
+    background-color: #f7f7f7; /* צבע רקע בהיר לכל הדף */
+    line-height: 1.6; /* הגדרת גובה שורה */
+    direction: rtl; /* כיוון טקסט מימין לשמאל (לשפות כמו עברית וערבית) */
+    text-align: center; /* כל הטקסט יהיה ממורכז */
+}
+
+.navbar {
+    background-color: #ffacf0; /* צבע רקע תפריט ניווט */
+    position: fixed; /* מיקום קבוע בתחתית הדף */
+    bottom: 0; /* מציב את התפריט בתחתית */
+    width: 100%; /* רוחב מלא */
+    display: flex; /* שימוש ב-flexbox עבור פריסת אלמנטים */
+    justify-content: center; /* ממקם את התפריט במרכז */
+    align-items: center; /* ממקם את התפריט במרכז אנכית */
+    padding: 12px; /* ריפוד פנימי לתפריט */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* הוספת צללה עדינה לתפריט */
+    z-index: 1000; /* הגדרת סדר שכבות כדי שהתפריט יופיע מעל אלמנטים אחרים */
+    border-radius: 30px 30px 0 0; /* קימור פינות התפריט */
+    transition: background-color 0.3s ease; /* השהיית שינוי צבע רקע */
+}
+
+/* עיצוב קישורים בתפריט */
+.navbar a {
+    font-weight: bold; /* הגדרת עובי הפונט כעבה */
+    color: #222020; /* צבע טקסט כהה */
+    text-decoration: none; /* מבטל את קו התחתון בקישורים */
+    font-size: 18px; /* גודל הפונט */
+    padding: 12px 18px; /* ריפוד פנימי של הקישור */
+    transition: all 0.3s ease; /* השהיית כל שינוי בעת מעבר על הקישור */
+    margin: 0 10px; /* רווח בין הקישורים */
+    border-radius: 20px; /* קימור פינות הקישורים */
+    position: relative; /* הגדרת מיקום יחסי */
+}
+
+/* כאשר שורפים עם העכבר על קישורים */
+.navbar a:hover {
+    background-color: #fecffb; /* שינוי צבע הרקע בעת ריחוף */
+    transform: scale(1.1); /* הגדלת הקישור בקנה מידה */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* הוספת צללה בעת ריחוף */
+}
+
+header.hero {
+    background-color: #fd4ebd; /* צבע רקע לאזור הראשי */
+    color: white; /* צבע טקסט לבן */
+    padding: 20px; /* ריפוד פנימי לאזור הראשי */
+}
+
+header.hero h1 {
+    font-size: 2.5rem; /* גודל הפונט של כותרת ראשית */
+    margin-bottom: 10px; /* רווח תחתון לכותרת */
+    animation: letterSpacingZoom 1s ease-out forwards; /* אנימציה לפיזור אותיות */
+}
+
+/* אנימציה של פיזור אותיות */
+@keyframes letterSpacingZoom {
+    0% {
+        letter-spacing: -5px; /* תחל להתחיל עם רווח קטן בין האותיות */
+        transform: scale(0.8); /* התחלה בקנה מידה קטן */
+        opacity: 0; /* שקיפות 0 (לא נראה) */
+    }
+    100% {
+        letter-spacing: 5px; /* רווח בין האותיות יהיה רחב יותר */
+        transform: scale(1); /* קנה המידה יחזור לגודלו הרגיל */
+        opacity: 1; /* השקיפות תהיה 100% */
+    }
+}
+
+header.hero p {
+    font-size: 1.2rem; /* גודל פונט עבור פסקאות בתוך אזור הראשי */
+}
+
+.steps h2 {
+    color: rgb(239, 0, 192); /* צבע כותרת שלב */
+    margin-top: 20px; /* רווח עליון */
+    margin-bottom: 20px; /* רווח תחתון */
+}
+
+.step-circle-container {
+    display: flex; /* שימוש ב-flexbox עבור פריסת מעגלים */
+    justify-content: center; /* ממקם את המעגלים במרכז */
+    gap: 20px; /* רווח בין המעגלים */
+    flex-wrap: wrap; /* מאפשר קו חדש אם לא מספיק מקום */
+    padding: 20px; /* ריפוד פנימי */
+}
+
+.step-circle {
+    width: 150px; /* קוטר המעגל */
+    height: 150px; /* גובה המעגל */
+    border-radius: 50%; /* הופך את האלמנט למעגל */
+    perspective: 1000px; /* הגדרת פרספקטיבה של תלת ממד */
+    cursor: pointer; /* הופך את הסמן לאצבע */
+}
+
+/* אנימציה להופעת המעגלים */
+#step-circle1, #step-circle2, #step-circle3 {
+    opacity: 0; /* תחילה המעגלים יהיו שקופים */
+    animation: slideInBounce 1.5s forwards; /* אנימציה למעגלים שיבואו עם אפקט "קפיצה" */
+}
+
+#step-circle1 {
+    animation-delay: 0.5s; /* דחיית האנימציה של מעגל 1 */
+}
+
+#step-circle2 {
+    animation-delay: 0.8s; /* דחיית האנימציה של מעגל 2 */
+}
+
+#step-circle3 {
+    animation-delay: 1s; /* דחיית האנימציה של מעגל 3 */
+}
+
+/* עיצוב הצדדים של המעגלים */
+.step-circle .front, .step-circle .back {
+    width: 100%; /* גודל מלא */
+    height: 100%; /* גובה מלא */
+    border-radius: 50%; /* קימור מלא (מעגל) */
+    background-color: #fca3ea; /* צבע רקע למעגלים */
+    color: rgb(0, 0, 0); /* צבע טקסט כהה */
+    display: flex; /* תצוגת אלמנטים ב-flexbox */
+    justify-content: center; /* ממקם את הטקסט במרכז */
+    align-items: center; /* ממקם את הטקסט במרכז אנכית */
+    font-size: 1.2rem; /* גודל פונט */
+    font-weight: bold; /* הפונט עבה */
+    position: absolute; /* מיקום מוחלט */
+    backface-visibility: hidden; /* חבוי את הצד האחורי כאשר הוא לא גלוי */
+    transition: transform 0.6s; /* השהיית שינויי טכניות */
+}
+
+.step-circle .front {
+    transform: rotateY(0deg); /* צד הקדמי לא סובב */
+}
+
+.step-circle .back {
+    transform: rotateY(180deg); /* צד אחורי מסובב ב-180 מעלות */
+    background-color: #f7f7f7; /* צבע רקע לצידו האחורי */
+    color: #333; /* צבע טקסט כהה */
+    padding: 10px; /* ריפוד פנימי */
+    box-sizing: border-box; /* כלול את הריפוד בחישוב הגודל */
+}
+
+/* אנימציה של סיבוב המעגלים */
+.step-circle.flipped .front {
+    transform: rotateY(-180deg); /* סיבוב צד קדמי */
+}
+
+.step-circle.flipped .back {
+    transform: rotateY(0deg); /* סיבוב צד אחורי */
+}
+
+.mobile-sidebar {
+    display: none; /* הסתרת הסיידבר במובייל */
+}
+
+.mobile-menu-toggle {
+    display: none; /* הסתרת כפתור התפריט במובייל */
+}
+
+/* אנימציה של החלקה למעלה */
+@keyframes slideInBounce {
+    0% {
+        transform: translateY(-100%); /* מתחיל למעלה מהמסך */
+        opacity: 0; /* שקיפות 0 */
+    }
+    60% {
+        transform: translateY(30px); /* זז למטה קצת */
+        opacity: 1; /* הופך לגלוי */
+    }
+    80% {
+        transform: translateY(-15px); /* קפיצה כלפי מעלה */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* חזרה למיקום הסופי */
+    }
+}
+
+/* עיצוב מותאם למסכים קטנים (עד 768 פיקסלים) */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* הסתרת התפריט בגרסת המובייל */
+    }
+    .mobile-menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        background-color: #ff66a5;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .mobile-sidebar {
+        display: none;
+        position: fixed;
+        background-color: #ffccd5;
+        width: 250px;
+        height: 100vh;
+        top: 0;
+        left: -250px;
+        padding-top: 3rem;
+        transition: transform 0.3s ease, left 0.3s ease;
+        border-radius: 15px 0 0 15px;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-sidebar.active {
+        display: block;
+        left: 0;
+    }
+
+    .mobile-sidebar a {
+        font-family: "Fresca", sans-serif;
+        text-align: center;
+        color: #272525;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #fff;
+        border-radius: 8px;
+    }
+
+    .mobile-sidebar a:hover {
+        background-color: #ff99b3;
+    }
+
+
+}
+

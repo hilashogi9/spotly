@@ -1,0 +1,272 @@
+/* הגדרת הגופן עבור הגוף הכללי */
+body {
+    font-family: "Fresca", sans-serif;
+    /* גופן בסיסי */
+    background-color: #ffe8f7;
+    /* צבע רקע כללי */
+}
+
+.navbar-nav a {
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    background-color: #fecffb;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* הגדרת עיצוב עבור החלק של "אודות" */
+.about-section {
+    padding: 60px 20px;
+    /* רווח פנימי */
+    border-radius: 15px;
+    /* פינות מעוגלות */
+}
+
+/* עיצוב לתיבות מידע */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* שקיפות קלה */
+    border-radius: 10px;
+    /* פינות מעוגלות לתיבות */
+    padding: 20px;
+    /* רווח פנימי בתיבות */
+    margin-bottom: 30px;
+    /* רווח בין תיבות */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* צל קל לתיבות */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* אנימציה חלקה */
+}
+
+/* אפקט הובר לתיבת מידע */
+.info-box:hover {
+    transform: translateY(-5px);
+    /* הזזת התיבה מעט למעלה כשמעליה */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    /* צל מודגש יותר בהזזה */
+}
+
+/* עיצוב כותרת ראשית */
+h1 {
+    color: #040000;
+    /* צבע כותרת לבן */
+    font-size: 2.5rem;
+    /* גודל כותרת גדול */
+}
+
+/*עיצוב כותרות י */
+h3 {
+    color: #ff69b4;
+    /* צבע כותרת תתי */
+    font-size: 1.8rem;
+    /* גודל כותרת תתי */
+    margin-bottom: 15px;
+    /* רווח מתחת לכותרת */
+}
+
+/* עיצוב לפסקאות */
+p {
+    font-size: 1rem;
+    /* גודל פסקה */
+    color: #333;
+    /* צבע טקסט */
+    line-height: 1.6;
+    /* גובה קו */
+}
+
+/* עיצוב כותרת מיוחדת עם אפקטים */
+.special-header {
+    font-size: 2.8rem;
+    /* גודל גופן גדול יותר */
+    color: #ff69b4;
+    /* צבע כותרת קבוע */
+    text-align: center;
+    /* יישור מרכזי */
+    padding: 15px 15px;
+    /* רווח פנימי גדול יותר */
+    border-radius: 12px;
+    /* פינות מעוגלות יותר */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* רקע שקוף בהיר */
+    letter-spacing: 1px;
+    /* רווח בין האותיות */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    /* אנימציה חלקה */
+    position: relative;
+    /* מאפשר מיקום מוחלט עבור האפקט בהובר */
+}
+
+/* עיצוב לקו תחתון בכותרת מיוחדת בהובר */
+.special-header::after {
+    content: '';
+    display: block;
+    width: 50%;
+    /* רוחב הקו התחתון */
+    height: 4px;
+    /* גובה הקו */
+    background-color: #ff69b4;
+    /* צבע הקו */
+    margin: 10px auto;
+    /* מיקום הקו במרכז */
+    border-radius: 5px;
+    /* פינות מעוגלות לקו */
+    transform: scaleX(0);
+    /* מתחיל כשהקו לא מוצג */
+    transition: transform 0.3s;
+    /* אנימציה חלקה להופעת הקו */
+}
+
+/* הצגת הקו תחתון בעת הובר על הכותרת */
+.special-header:hover::after {
+    transform: scaleX(1);
+    /* הצגת הקו תחתון */
+}
+
+/* אנימציה למעבר הדרגתי */
+.fade-in-down {
+    animation: fadeInDown 0.5s ease-out;
+    /* אנימציה לפסקאות */
+}
+
+/* הגדרת האנימציה למעבר הדרגתי */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* כרטיסים */
+.card {
+    border: none;
+    /* מסיר גבולות מהכרטיסים */
+    border-radius: 15px;
+    /* פינות מעוגלות לכרטיסים */
+    transition: transform 0.2s;
+    /* אנימציה בזמן שינוי גובה */
+    background-color: #ffffff;
+    /* צבע רקע לכרטיסים */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* צל קל */
+}
+
+/* אפקט הובר בכרטיסים */
+.card:hover {
+    transform: scale(1.05);
+    /* הגדלה קלה בכרטיסים בזמן הובר */
+}
+
+/* עיצוב לתמונה בכרטיס */
+.img-fluid {
+    max-width: 50%;
+    /* מקסימום רוחב של 50% */
+    height: auto;
+    /* גובה אוטומטי */
+    margin: 20px auto;
+    /* ממקם את התמונה במרכז */
+}
+
+/* עיצוב גוף הכרטיס */
+.card-body {
+    background-color: #f9f9f9de;
+    /* רקע בהיר לכרטיסים */
+    border-radius: 15px 15px 0 0;
+    /* פינות מעוגלות רק בחלק העליון */
+}
+
+/* עיצוב הטופס */
+form {
+    background-color: #ffffff;
+    /* רקע לבן */
+    border-radius: 15px;
+    /* פינות מעוגלות */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* צל קל */
+    padding: 20px;
+    /* רווח פנימי */
+    animation: slideDown 0.7s ease-out;
+    /* אנימציה גלישה למטה */
+}
+
+/* עיצוב שדות הקלט בטופס */
+form input,
+form textarea,
+form select {
+    border-radius: 10px;
+    /* פינות מעוגלות */
+    border: 2px solid #ff69b4;
+    /* גבול ורוד בהיר */
+    padding: 12px;
+    /* רווח פנימי */
+    margin-bottom: 15px;
+    /* רווח בין שדות */
+}
+
+/* עיצוב לכפתורים רדיו ו-checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    /* רווח בין הכפתורים לטקסט */
+}
+
+/* עיצוב כפתור שליחה */
+.btn-submit {
+    background-color: #fda1cf;
+    /* צבע ורוד */
+    color: white;
+    /* טקסט לבן */
+    font-weight: bold;
+    /* טקסט מודגש */
+    border: none;
+    /* מסיר גבול */
+    padding: 12px;
+    /* רווח פנימי */
+    border-radius: 30px;
+    /* פינות מעוגלות */
+    transition: background-color 0.3s;
+    /* אנימציה בזמן שינוי צבע */
+}
+
+/* אפקט הובר לכפתור שליחה */
+.btn-submit:hover {
+    background-color: #ff5fb4;
+    /* צבע כהה יותר בהובר */
+}
+
+.navbar {
+    border-bottom: 1.2px solid rgb(125, 0, 242);
+}
+
+/* אנימציה למעבר טופס */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav a {
+        padding: 0.5rem;
+    }
+
+    .navbar-nav a:hover {
+        background-color: #fecffb;
+        transform: scale(1);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}

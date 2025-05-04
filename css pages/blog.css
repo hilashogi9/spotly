@@ -1,0 +1,184 @@
+/* בסיסי לעמוד */
+body {
+    font-family: "Fresca", sans-serif;
+    /* הגדרת הפונט לעמוד */
+    background-color: #fce4ec;
+    /* צבע רקע עדין לעמוד */
+    color: #333;
+    /* צבע טקסט ברירת מחדל */
+}
+
+h1,
+h3 {
+    color: #d81b60;
+    /* צבע כותרות */
+}
+
+.container {
+    max-width: 1200px;
+    /* רוחב מקסימלי לתוכן המרכזי */
+}
+
+/* עיצוב לאיזור הבלוג */
+.blog-section,
+.comparison-section {
+    margin-top: 40px;
+    /* ריווח עליון */
+    padding: 20px;
+    /* ריווח פנימי */
+    border-radius: 8px;
+    /* פינות מעוגלות */
+    background-color: #ffffff;
+    /* רקע לבן לאזורי התוכן */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* צל עדין */
+}
+
+.blog-post img,
+.comparison-icon img {
+    transition: transform 0.3s;
+    /* אנימציית מעבר להגדלה */
+    border-radius: 8px;
+    /* פינות מעוגלות לתמונות */
+}
+
+.img-fluid {
+    max-width: 20%;
+    /* הגבלת רוחב תמונה */
+    height: auto;
+    /* התאמת גובה אוטומטית */
+    margin: 20px auto;
+    /* מיקום במרכז */
+}
+
+.blog-post img:hover,
+.comparison-icon img:hover {
+    transform: scale(1.05);
+    /* הגדלת תמונות בעת מעבר עכבר */
+}
+
+.blog-post h3 {
+    font-size: 1.25rem;
+    /* גודל פונט לכותרות בלוג */
+    color: #c2185b;
+    /* צבע כותרות בלוג */
+}
+
+/* עיצוב טבלה עם צבעים עדינים */
+.comparison-table {
+    width: 100%;
+    /* טבלה ברוחב מלא */
+    border-collapse: collapse;
+    /* איחוד גבולות תאים */
+    margin-top: 20px;
+    /* ריווח עליון */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* צל עדין */
+}
+
+.comparison-table th {
+    text-align: center;
+    /* יישור מרכזי לתאי כותרות */
+    background-color: #e1bee7;
+    /* רקע לתאי כותרת */
+    color: #6b0685;
+    /* צבע טקסט לתאי כותרת */
+    padding: 12px;
+    /* ריווח פנימי */
+    font-size: 1rem;
+    /* גודל טקסט לכותרת */
+    font-weight: 600;
+    /* משקל פונט */
+}
+
+.comparison-table td {
+    padding: 10px;
+    /* ריווח פנימי לתאים */
+    font-size: 1rem;
+    /* גודל טקסט */
+    text-align: center;
+    /* יישור מרכזי לתאים */
+    color: #555;
+    /* צבע טקסט לתאי מידע */
+    background-color: #f3e5f5;
+    /* צבע רקע לתאי מידע */
+}
+
+.comparison-table tr:nth-child(even) td {
+    background-color: #ede7f6;
+    /* צבע רקע לתורים זוגיים */
+}
+
+.comparison-table tr:hover td {
+    background-color: #d1c4e9;
+    /* רקע לתאים במעבר עכבר */
+    color: #333;
+    /* צבע טקסט במעבר עכבר */
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* אנימציות */
+.fade-in {
+    animation: fadeIn 1s ease;
+    /* אנימציית כניסה רכה */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    /* התחלה בחוסר שקיפות */
+    to {
+        opacity: 1;
+    }
+
+    /* סיום עם שקיפות מלאה */
+}
+
+.navbar {
+    border-bottom: 1.2px solid rgb(125, 0, 242);
+    /* קו תחתון לתפריט ניווט */
+}
+
+.navbar-nav a {
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    background-color: #fecffb;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* עיצוב לרספונסיביות */
+@media (max-width: 768px) {
+
+    /* התאמות למסכים קטנים */
+    .row>.col-md-6,
+    .row>.col-md-4 {
+        margin-bottom: 20px;
+        /* ריווח תחתון לעמודות */
+    }
+
+    .navbar-nav a {
+        padding: 0.5rem;
+        /* ריווח פנימי לקישורים בתפריט */
+    }
+
+    .navbar-nav a:hover {
+        background-color: #fecffb;
+        /* צבע רקע במעבר עכבר */
+        transform: scale(1);
+        /* ביטול הגדלה */
+        border-radius: 12px;
+        /* שמירת פינות מעוגלות */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* צל עדין */
+    }
+}

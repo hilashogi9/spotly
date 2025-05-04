@@ -1,0 +1,303 @@
+/* רקע ורוד */
+body {
+    font-family: "Fresca", sans-serif;
+    /* הגדרת גופן */
+    background: #faeaf0;
+    /* צבע רקע ורוד בהיר */
+    background-size: cover;
+    /* כיסוי הרקע על כל הדף */
+    margin: 0;
+    /* ביטול מרווחים מסביב לדף */
+}
+
+/* עיצוב קישורים בתפריט הניווט */
+.navbar-nav a {
+    border-radius: 12px;
+    /* קשת פינות לקישורים בתפריט */
+}
+
+/* עיצוב קישורים בתפריט הניווט כאשר יש החלקה מעליהם */
+.navbar-nav a:hover {
+    background-color: #fecffb;
+    /* צבע רקע בהחלקה */
+    transform: scale(1.1);
+    /* הגדלת הקישור במעט */
+    border-radius: 12px;
+    /* שמירה על קשת פינות */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* הוספת צל */
+}
+
+/* מיכל התחברות */
+.login-box {
+    width: 800px;
+    /* גודל המיכל */
+    max-width: 90%;
+    /* מקסימום רוחב 90% מהמסך */
+    display: flex;
+    /* הצגת רכיבים בעזרת Flexbox */
+    border-radius: 20px;
+    /* קשת פינות */
+    overflow: hidden;
+    /* חיתוך תוכן היוצא מהגבולות */
+    animation: fadeIn 1.5s ease;
+    /* אנימציה להופעה הדרגתית */
+}
+
+/* צד ימין - הודעת קבלת פנים */
+.welcome-message {
+    background: linear-gradient(135deg, #ff6b81, #f8a5c2);
+    /* גרדיאנט צבעים */
+    flex: 1;
+    /* התפשטות ברוחב */
+    display: flex;
+    /* הצגת רכיבים בעזרת Flexbox */
+    flex-direction: column;
+    /* סידור רכיבים בעמודה */
+    justify-content: center;
+    /* מיקום במרכז */
+    animation: slideInRight 1.5s ease;
+    /* אנימציה להחלקה מימין */
+}
+
+/* צד שמאל - טופס התחברות */
+.login-form {
+    background-color: #ffffff;
+    /* צבע רקע לבן */
+    flex: 1;
+    /* התפשטות ברוחב */
+    display: flex;
+    /* הצגת רכיבים בעזרת Flexbox */
+    flex-direction: column;
+    /* סידור רכיבים בעמודה */
+    justify-content: center;
+    /* מיקום במרכז */
+    animation: slideInLeft 1.5s ease;
+    /* אנימציה להחלקה משמאל */
+}
+
+/* אייקון הממוקם בצד הימני של הטופס */
+.icon {
+    position: absolute;
+    /* מיקום מוחלט */
+    right: 15px;
+    /* מרחק מימין */
+    top: 50%;
+    /* מיקום באמצע הגובה */
+    transform: translateY(-50%);
+    /* הזזת האייקון למרכז */
+    color: #ff6b81;
+    /* צבע האייקון */
+}
+
+/* עיצוב כפתור כניסה */
+.btn-primary {
+    background-color: #ff6b81;
+    /* צבע רקע של כפתור */
+    border: none;
+    /* ביטול גבול לכפתור */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* אנימציה שינויים בצבע ובגודל */
+}
+
+/* עיצוב כפתור כניסה בהחלקה */
+.btn-primary:hover {
+    background-color: #ff4757;
+    /* שינוי צבע הרקע בהחלקה */
+    transform: scale(1.05);
+    /* הגדלת הכפתור במעט */
+}
+
+/* עיצוב שדות טקסט - אפקט מעבר */
+input[type="text"],
+input[type="password"] {
+    transition: box-shadow 0.3s ease;
+    /* אנימציה לשינוי הצל */
+}
+
+/* אפקט שדה טקסט במיקוד */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0px 0px 8px rgba(255, 107, 129, 0.6);
+    /* הוספת צל במיקוד */
+    border-color: #ff6b81;
+    /* שינוי צבע הגבול במיקוד */
+}
+
+/* עיצוב קישורים */
+a {
+    color: #ff6b81;
+    /* צבע הקישורים */
+    transition: color 0.3s ease;
+    /* אנימציה לשינוי צבע */
+}
+
+/* עיצוב קישורים בהחלקה */
+a:hover {
+    color: #ff4757;
+    /* שינוי צבע הקישור בהחלקה */
+}
+
+/* הגדרת אנימציות */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* התחלת שקיפות */
+    }
+
+    to {
+        opacity: 1;
+        /* שקיפות מלאה בסיום */
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        /* התחלה מחוץ למסך מימין */
+        opacity: 0;
+        /* שקיפות בהתחלה */
+    }
+
+    to {
+        transform: translateX(0);
+        /* סיום במיקום רגיל */
+        opacity: 1;
+        /* שקיפות מלאה בסיום */
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        /* התחלה מחוץ למסך משמאל */
+        opacity: 0;
+        /* שקיפות בהתחלה */
+    }
+
+    to {
+        transform: translateX(0);
+        /* סיום במיקום רגיל */
+        opacity: 1;
+        /* שקיפות מלאה בסיום */
+    }
+}
+
+/* עיצוב פרחים בצדדים */
+.flower-left {
+    position: absolute;
+    /* מיקום מוחלט */
+    bottom: 40px;
+    /* מרחק מלמטה */
+    left: 0;
+    /* מיקום התחלתי משמאל */
+    width: 0;
+    /* רוחב התחלתי 0 */
+    height: auto;
+    /* גובה אוטומטי */
+    animation: grow 3s forwards;
+    /* אנימציה לצמיחה */
+}
+
+.flower-right {
+    position: absolute;
+    /* מיקום מוחלט */
+    top: 70px;
+    /* מיקום בצד ימין למעלה */
+    right: 0;
+    /* מיקום התחלתי מימין */
+    width: 0;
+    /* רוחב התחלתי 0 */
+    height: auto;
+    /* גובה אוטומטי */
+    animation: grow 3s forwards;
+    /* אנימציה לצמיחה */
+    animation-delay: 1s;
+    /* דחיית האנימציה */
+}
+
+/* אנימציה לפרחים */
+@keyframes grow {
+    0% {
+        width: 0;
+        /* רוחב 0 בהתחלה */
+        opacity: 0;
+        /* בהתחלה שקוף */
+    }
+
+    50% {
+        width: 150px;
+        /* רוחב ביניים */
+        opacity: 1;
+        /* הופך לאט לאט לאטום */
+    }
+
+    100% {
+        width: 150px;
+        /* רוחב סופי */
+        transform: scale(1.2);
+        /* התרחבות */
+    }
+}
+
+/* עיצוב למכשירים ניידים */
+@media (max-width: 576px) {
+    .flower {
+        left: 5px;
+        /* התאמת המיקום לפרחים */
+    }
+
+    .flower-1 {
+        top: -20px;
+        /* התאמת מיקום */
+    }
+
+    .flower-2 {
+        top: -50px;
+        /* התאמת מיקום */
+    }
+}
+
+/* עיצוב שורת ניווט */
+.navbar {
+    border-bottom: 1.2px solid rgb(125, 0, 242);
+    /* קו תחתון בתפריט */
+}
+
+/* עיצוב למכשירים קטנים יותר (עד 767px) */
+@media (max-width: 767px) {
+    .login-box {
+        flex-direction: column;
+        /* סידור הרכיבים בעמודה */
+        align-items: center;
+        /* מיקום הרכיבים במרכז */
+    }
+
+    .welcome-message {
+        display: none;
+        /* הסתרת צד ימין במכשירים קטנים */
+    }
+
+    .login-form {
+        width: 100%;
+        /* רוחב מלא */
+        padding: 2rem 1rem;
+        /* ריפוד פנימי */
+    }
+
+    .navbar-nav a {
+        padding: 0.5rem;
+        /* ריפוד סביב הקישורים בתפריט */
+    }
+
+    .navbar-nav a:hover {
+        background-color: #fecffb;
+        /* צבע רקע בהחלקה */
+        transform: scale(1);
+        /* החזרת גודל רגיל */
+        border-radius: 12px;
+        /* קשת פינות */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        /* הוספת צל */
+    }
+}

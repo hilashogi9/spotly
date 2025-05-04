@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css pages/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <title>Spotly Product Overview</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: white;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="pictures/Picture1-removebg-preview.png" alt="Spotly Logo" style="height: 40px; width: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link active" href="product.html">Product</a>
+                    <a class="nav-link" href="blog.html">Blog</a>
+                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link" href="signUp.html">SignUp</a>
+                    <a class="nav-link" id="personalSpaceLink" style="display: none;"
+                        href="/html-pages/personal space/personal.html">Personal Space</a>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center my-5">
+        <h1 class="main-title">Spotly Tracking Device</h1>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="info-box slide-in-left">
+                    <img src="pictures/track.png" class="feature-icon" alt="Track Icon">
+                    <h3>Real-time Tracking</h3>
+                    <p>Track your belongings in real-time with precision.</p>
+                </div>
+                <div class="info-box slide-in-left">
+                    <img src="pictures/noti.png" class="feature-icon" alt="Notification Icon">
+                    <h3>Instant Notifications</h3>
+                    <p>Receive instant notifications if your item is lost.</p>
+                </div>
+                <div class="info-box slide-in-left">
+                    <img src="pictures/mind.png" class="feature-icon" alt="Integration Icon">
+                    <h3>Seamless Integration</h3>
+                    <p>Easy integration with your smartphone and devices.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <img src="pictures/image-removebg-preview (1).png" class="img-fluid" alt="Spotly Tracking Device"
+                    id="device-image">
+            </div>
+
+            <div class="col-md-4">
+                <div class="info-box slide-in-right">
+                    <img src="pictures/7585410.png" class="feature-icon" alt="Compact Icon">
+                    <h3>Compact Design</h3>
+                    <p>Compact design, easy to carry and use.</p>
+                </div>
+                <div class="info-box slide-in-right">
+                    <img src="pictures/batteryy-removebg-preview.png" class="feature-icon" alt="Battery Icon">
+                    <h3>Long Battery Life</h3>
+                    <p>Long battery life for extended use.</p>
+                </div>
+                <div class="info-box slide-in-right">
+                    <img src="pictures/connection-line-gradient-icon-vector.jpg" class="feature-icon"
+                        alt="Multiple Connections Icon">
+                    <h3>Multiple Connections</h3>
+                    <p>Connect multiple devices for broader coverage.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2">
+        <p>&copy; 2024 Spotly. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="firebase.js"></script>
+</body>
+
+</html>

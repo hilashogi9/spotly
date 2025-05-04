@@ -1,0 +1,111 @@
+body {
+    font-family: "Fresca", sans-serif; /* הגדרת הגופן הכללי */
+    background-color: #fef9f3; /* צבע רקע בהיר לדף */
+}
+.navbar {
+    border-bottom: 1.2px solid rgb(125, 0, 242);
+  }
+  .navbar-nav a {
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar-nav a:hover {
+    background-color: #fecffb;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+.main-title {
+    font-size: 2.5rem; /* גודל כותרת ראשית */
+    color: #d81b60; /* צבע כותרת ורוד */
+    margin-bottom: 30px; /* רווח מתחת לכותרת */
+    opacity: 0; /* הכותרת מתחילה כשקופה */
+    transform: translateY(-30px); /* הכותרת מתחילה במיקום גבוה יותר */
+    animation: fadeInUp 0.5s forwards; /* אנימציה להופעת הכותרת כלפי מעלה */
+    animation-delay: 0.3s; /* דחיית התחלת האנימציה ב-0.3 שניות */
+}
+
+.info-box {
+    background-color: white; /* צבע רקע לבן לתיבות המידע */
+    border-radius: 10px; /* פינות מעוגלות לתיבות המידע */
+    padding: 20px; /* רווח פנימי בתיבת המידע */
+    margin: 10px 0; /* רווח בין תיבות המידע */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* צל עדין לתיבות המידע */
+    opacity: 0; /* התיבות מתחילות כשקופות */
+    animation: fadeInUp 0.5s forwards; /* אנימציה להופעת התיבות כלפי מעלה */
+    transition: box-shadow 0.3s ease; /* שינוי הצל בזמן הובר */
+}
+
+.info-box:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* כשהתיבה ממוקמת מעליה, הצל הופך ליותר חזק */
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s forwards; /* אנימציה להזזה משמאל לימין */
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s forwards; /* אנימציה להזזה מימין לשמאל */
+}
+
+.feature-icon {
+    width: 30px; /* גודל האייקון */
+    margin-right: 10px; /* רווח בין האייקון לטקסט */
+    vertical-align: middle; /* יישור אנכי של האייקון */
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%); /* תחילת האנימציה ממיקום מחוץ למסך משמאל */
+        opacity: 0; /* התחלה עם שקיפות */
+    }
+    to {
+        transform: translateX(0); /* סיום האנימציה במיקום הרגיל */
+        opacity: 1; /* סיום האנימציה עם שקיפות מלאה */
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%); /* תחילת האנימציה ממיקום מחוץ למסך מימין */
+        opacity: 0; /* התחלה עם שקיפות */
+    }
+    to {
+        transform: translateX(0); /* סיום האנימציה במיקום הרגיל */
+        opacity: 1; /* סיום האנימציה עם שקיפות מלאה */
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* הופעה מלאה של האלמנט */
+        transform: translateY(0); /* החזרת האלמנט למיקום הרגיל */
+    }
+}
+
+#device-image {
+    opacity: 0; /* התמונה מתחילה כשקופה */
+    transform: scale(0.5); /* התמונה מתחילה בגודל קטן יותר */
+    animation: scaleIn 0.5s forwards; /* אנימציה להגדלת התמונה */
+    animation-delay: 1.7s; /* דחיית התחלת האנימציה ב-1.7 שניות */
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1; /* סיום האנימציה עם שקיפות מלאה */
+        transform: scale(1); /* החזרת התמונה לגודל המקורי */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav a {
+        padding: 0.5rem;
+      }
+      .navbar-nav a:hover {
+        background-color: #fecffb;
+        transform: scale(1);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+}

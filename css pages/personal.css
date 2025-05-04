@@ -1,0 +1,239 @@
+/* עיצוב גוף הדף */
+body {
+    background-color: #fff1f1; /* צבע רקע בהיר עם גוון ורוד בהיר */
+    font-family: "Fresca", sans-serif; /* פונט "Fresca" */
+    color: #333; /* צבע טקסט כהה */
+}
+
+/* עיצוב הכרטיסים */
+.card {
+    border: none; /* ללא גבול מסביב לכרטיס */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* צל קטן סביב הכרטיס */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* אנימציה לרוחב והצל */
+}
+
+/* עיצוב בעת ריחוף מעל הכרטיס */
+.card:hover {
+    transform: translateY(-5px); /* הזזה של הכרטיס כלפי מעלה */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* הצל הופך לחזק יותר */
+}
+
+/* עיצוב כפתורים */
+.btn {
+    color: #ff66a5; /* צבע טקסט לכפתור */
+    background-color: #ffe8ec; /* צבע רקע בהיר לכפתור */
+}
+
+.btn:hover {
+    background-color: #ff66a5; /* צבע רקע משתנה בעת ריחוף */
+}
+
+/* עיצוב שורות */
+.middle-row {
+    margin-left: 150px; /* ריווח משמאל לשורה */
+}
+
+.down-row {
+    margin-left: 100px; /* ריווח קטן יותר משמאל לשורה */
+}
+
+/* עיצוב כרטיסים גדולים */
+.large-card {
+    margin-left: 70px; /* ריווח משמאל לכרטיס הגדול */
+    margin-top: 60px; /* ריווח מלמעלה */
+    border: none; /* ללא גבול סביב הכרטיס */
+    border: 0.2px solid; /* גבול דק */
+    border-color: #4f4e4e; /* צבע הגבול אפור כהה */
+    border-radius: 30px; /* פינות מעוגלות */
+    background-color: #ffdfe4; /* צבע רקע בהיר ורוד */
+    animation: floatingCloud 3s infinite ease-in-out; /* אנימציה של תנועה מעלה-מטה */
+    text-align: center; /* טקסט ממורכז בתוך הכרטיס */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* צל חזק יותר לכרטיס */
+}
+
+/* אנימציה של תנועה מעלה-מטה לכרטיסים הגדולים */
+@keyframes floatingCloud {
+    0% {
+        transform: translateY(0); /* התחלה במיקום רגיל */
+    }
+    50% {
+        transform: translateY(20px); /* הזזת הכרטיס למטה */
+    }
+    100% {
+        transform: translateY(0); /* חזרה למיקום רגיל */
+    }
+}
+
+/* עיצוב כותרת וכיתוב בתוך כרטיסים גדולים */
+.large-card .card-title {
+    font-size: 1.8rem; /* גודל הפונט לכותרת */
+    font-weight: bold; /* כותרת בולטת */
+    color: #ff66a5; /* צבע ורוד לכותרת */
+    margin-bottom: 1rem; /* ריווח מתחת לכותרת */
+}
+
+.large-card .card-text {
+    font-size: 1.2rem; /* גודל הפונט לכיתוב */
+    line-height: 1.6; /* רווח בין שורות הטקסט */
+    color: #3e3e3e; /* צבע כהה לכיתוב */
+}
+
+/* עיצוב התוכן הראשי של הדף */
+.content {
+    margin-left: 150px; /* ריווח משמאל */
+    padding: 1.5rem; /* ריפוד סביב התוכן */
+    border-radius: 12px; /* פינות מעוגלות */
+    transition: margin 0.3s ease; /* אנימציה לשינוי ריווח */
+    animation: slideInBounce 1.5s forwards; /* אנימציה לתנועה מצד שמאל */
+}
+
+/* אנימציה של הזזה של התוכן */
+@keyframes slideInBounce {
+    0% {
+        transform: translateX(-100%); /* התחלה מחוץ למסך מצד שמאל */
+        opacity: 0; /* שקיפות מלאה */
+    }
+    60% {
+        transform: translateX(30px); /* הזזת התוכן שמאלה */
+        opacity: 1; /* הצגת התוכן */
+    }
+    80% {
+        transform: translateX(-15px); /* הזזת התוכן מעט שמאלה */
+    }
+    100% {
+        transform: translateX(0); /* חזרה למיקום הרגיל */
+    }
+}
+
+/* עיצוב כותרת בתוך התוכן */
+.content h1 {
+    color: #ff66a5; /* צבע ורוד לכותרת */
+    font-size: 2.5rem; /* גודל הפונט לכותרת */
+    margin-bottom: 1rem; /* ריווח מתחת לכותרת */
+}
+
+/* עיצוב פסקאות בתוך התוכן */
+.content p {
+    font-size: 1.1rem; /* גודל הפונט לפסקה */
+    line-height: 1.6; /* רווח בין שורות הפסקה */
+    color: #666; /* צבע אפור לפסקה */
+}
+
+
+.sidebar {
+    background-color: #ffccd5;
+    height: 100vh;
+    width: 160px;
+    position: fixed;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+    background-color: #ffb3c1;
+}
+
+.mobile-sidebar {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+
+
+
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) { 
+    /* כלל עיצוב עבור מסכים שגודלם עד 768 פיקסלים, בדרך כלל למוביילים וטאבלטים */
+    
+    #gif { 
+        display: none; /* מסתיר את האלמנט עם מזהה 'gif' */
+    }
+
+    .sidebar { 
+        display: none; /* מסתיר את הסיידבר, כך שלא יופיע במסכים קטנים */
+    }
+
+    .content { 
+        margin: 0; /* מבטל את השוליים סביב האלמנט עם המחלקה 'content' */
+    }
+
+    .middle-row { 
+        margin: 0; /* מבטל את השוליים סביב האלמנט עם המחלקה 'middle-row' */
+    }
+
+    .down-row { 
+        margin: 0; /* מבטל את השוליים סביב האלמנט עם המחלקה 'down-row' */
+    }
+
+    .large-card { 
+        margin-top: 1rem; /* מוסיף שוליים עליונים בגודל 1rem לאלמנט עם המחלקה 'large-card' */
+        margin-left: 0; /* מבטל את השוליים השמאליים של האלמנט 'large-card' */
+    }
+    .mobile-menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        background-color: #ff66a5;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .mobile-sidebar {
+        display: none;
+        position: fixed;
+        background-color: #ffccd5;
+        width: 250px;
+        height: 100vh;
+        top: 0;
+        left: -250px;
+        padding-top: 3rem;
+        transition: transform 0.3s ease, left 0.3s ease;
+        border-radius: 15px 0 0 15px;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-sidebar.active {
+        display: block;
+        left: 0;
+    }
+
+    .mobile-sidebar a {
+        color: #272525;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #fff;
+        border-radius: 8px;
+    }
+
+    .mobile-sidebar a:hover {
+        background-color: #ff99b3;
+    }
+
+}

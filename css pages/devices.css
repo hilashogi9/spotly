@@ -1,0 +1,185 @@
+body {
+    background-color: #fff0f5; /* צבע רקע בגוון ורוד בהיר */
+    font-family: "Fresca", sans-serif; /* הגדרת פונט 'Fresca' */
+    margin: 0; /* מבטל את השוליים של הדף */
+    padding: 0; /* מבטל את הריפוד של הדף */
+}
+
+.btn {
+    color: #ff66a5; /* צבע טקסט של כפתור (ורוד) */
+    background-color: #ffe8ec; /* צבע רקע של כפתור (ורוד בהיר) */
+    display: flex; /* מאפשר פריסת אלמנטים בתוך הכפתור עם flexbox */
+    justify-content: center; /* ממקם את התוכן במרכז */
+    align-items: center; /* ממקם את התוכן במרכז אנכית */
+}
+
+.btn:hover {
+    color: #000000; /* צבע טקסט בעת ריחוף על הכפתור (שחור) */
+    background-color: #ff66a5; /* צבע רקע בעת ריחוף (ורוד כהה יותר) */
+}
+
+.container {
+    margin-top: 50px; /* רווח עליון למיכל */
+    margin-left: 190px; /* רווח שמאלי למיכל */
+    background-color: #fff; /* צבע רקע לבן */
+    border-radius: 15px; /* קימור לפינות של המיכל */
+    padding: 30px; /* ריפוד פנימי למיכל */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* הוספת צללה למיכל */
+}
+
+h1 {
+    color: #ff69b4; /* צבע טקסט ורוד לכותרת */
+    font-weight: bold; /* הגדרת הפונט כעבה */
+}
+
+.form-label {
+    color: #ff69b4; /* צבע טקסט תווית של שדות טופס */
+    font-weight: 500; /* עובי בינוני לפונט */
+}
+
+.form-control,
+.form-select {
+    border-color: #ffb6c1; /* צבע גבול לשדות טופס ובחירת תפריט (ורוד בהיר) */
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ff69b4; /* צבע גבול בהשגת פוקוס על שדות טופס */
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25); /* הוספת צללה סביב השדה כאשר הוא פעיל */
+}
+
+.btn-primary {
+    background-color: #ff69b4; /* צבע רקע לכפתור ראשי (ורוד כהה) */
+    border-color: #ff69b4; /* צבע גבול של כפתור ראשי */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #ff1493; /* צבע רקע כאשר מרחפים או מקבלים פוקוס (ורוד בהיר יותר) */
+    border-color: #ff1493; /* צבע גבול כאשר מרחפים או מקבלים פוקוס */
+}
+
+.card {
+    border-color: #ffb6c1; /* צבע גבול לכרטיס (ורוד בהיר) */
+    border-radius: 10px; /* קימור לפינות הכרטיס */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* הוספת צללה עדינה לכרטיס */
+}
+
+.card-title {
+    color: #ff69b4; /* צבע טקסט כותרת הכרטיס (ורוד כהה) */
+    font-weight: 500; /* עובי בינוני לפונט */
+}
+
+.list-group-item {
+    border-color: #ffb6c1; /* צבע גבול של פריטי רשימה (ורוד בהיר) */
+    color: #333; /* צבע טקסט כהה לפריטי רשימה */
+}
+
+
+.sidebar {
+    background-color: #ffccd5;
+    height: 100vh;
+    width: 160px;
+    top: 0;
+    position: fixed;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sidebar a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sidebar a:hover {
+    background-color: #ffb3c1;
+}
+
+.mobile-sidebar {
+    display: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* כללים אלו חלים כאשר רוחב המסך קטן או שווה ל-768 פיקסלים (לרוב על מכשירים ניידים) */
+
+    .container {
+        margin: 20px auto; /* ממרכז את המיכל אופקית עם רווח של 20px משני הצדדים */
+        padding: 20px; /* ריפוד פנימי של 20px */
+        max-width: calc(100% - 20px); /* מוודא שאין גלילה אופקית על ידי חישוב רוחב המיכל פחות 20px */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* משנה את גודל הפונט של כותרת h1 ל-1.8rem כאשר המסך קטן */
+    }
+
+    .large-card {
+        margin-top: 1rem; /* מוסיף רווח עליון של 1rem לכרטיסים הגדולים */
+        margin-left: 0; /* מבטל את הרווח השמאלי, כך שהכרטיסים יתפרסו לרוחב המיכל */
+    }
+
+    .sidebar {
+        display: none; /* מסתיר את הסרגל הצדדי (sidebar) במכשירים ניידים */
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        background-color: #ff66a5;
+        color: #ffffff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .mobile-sidebar {
+        display: none;
+        position: fixed;
+        background-color: #ffccd5;
+        width: 250px;
+        height: 100vh;
+        top: 0;
+        left: -250px;
+        padding-top: 3rem;
+        transition: transform 0.3s ease, left 0.3s ease;
+        border-radius: 15px 0 0 15px;
+        box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-sidebar.active {
+        display: block;
+        left: 0;
+    }
+
+    .mobile-sidebar a {
+        color: #272525;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+        border-bottom: 1px solid #fff;
+        border-radius: 8px;
+    }
+
+    .mobile-sidebar a:hover {
+        background-color: #ff99b3;
+    }
+}

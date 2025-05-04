@@ -1,0 +1,199 @@
+/* הגדרת רקע גוף האתר עם תמונה, בחירת גופן והסרת מרווחים */
+body {
+    font-family: "Fresca", sans-serif;
+    background-image: url("/html-pages/pictures/il_570xN.2636499206_1s1z.avif");
+    /* הגדרת תמונת רקע */
+    background-size: cover;
+    /* התאמת גודל התמונה לכיסוי מלא */
+    margin: 0;
+    /* הסרת מרווחים חיצוניים */
+}
+
+/* עיצוב קישורי תפריט הניווט */
+.navbar-nav a {
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar-nav a:hover {
+    background-color: #fecffb;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+/* מיכל עיצוב לטופס ההרשמה */
+.signup-box {
+    width: 800px;
+    max-width: 90%;
+    /* מגבלת רוחב למכשירים קטנים */
+    display: flex;
+    /* תצוגה גמישה */
+    border-radius: 20px;
+    /* פינות מעוגלות */
+    overflow: hidden;
+    animation: fadeIn 1.5s ease;
+    /* אנימציה להופעה */
+}
+
+/* צד ימין - הודעת קבלת פנים */
+.welcome-message {
+    background: linear-gradient(135deg, #ff6b81, #f8a5c2);
+    /* מעבר צבעים */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInRight 1.5s ease;
+    /* אנימציה להחלקה מימין */
+}
+
+/* צד שמאל - טופס הרשמה */
+.signup-form {
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 1.5s ease;
+    /* אנימציה להחלקה משמאל */
+}
+
+/* עיצוב אייקון בטופס */
+.icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff6b81;
+}
+
+/* עיצוב כפתור הרשמה */
+.btn-primary {
+    background-color: #ff6b81;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* אפקט בהנפת עכבר מעל כפתור ההרשמה */
+.btn-primary:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+    /* הגדלה קטנה בלחיצה */
+}
+
+/* אפקט מעבר לשדות טקסט בטופס */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    transition: box-shadow 0.3s ease;
+}
+
+/* אפקט מיקוד על שדות טקסט */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    box-shadow: 0px 0px 8px rgba(255, 107, 129, 0.6);
+    border-color: #ff6b81;
+}
+
+/* עיצוב קישורים */
+a {
+    color: #ff6b81;
+    transition: color 0.3s ease;
+}
+
+/* אפקט מעבר על קישורים */
+a:hover {
+    color: #ff4757;
+}
+
+/* אנימציה להופעה */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* אנימציה להחלקה מימין */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* אנימציה להחלקה משמאל */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* עיצוב לרספונסיביות במסכים קטנים */
+@media (max-width: 767px) {
+    .signup-box {
+        flex-direction: column;
+        /* הצגת מיכל בצורה אנכית */
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .signup-form,
+    .welcome-message {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .signup-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        /* התאמת רוחב כפתור למסכים קטנים */
+    }
+}
+
+/* עיצוב תחתית התפריט */
+.navbar {
+    border-bottom: 1.2px solid rgb(125, 0, 242);
+}
+
+/* התאמות נוספות למסכים קטנים מאוד */
+@media (max-width: 576px) {
+    .signup-box {
+        margin-top: 50px;
+    }
+
+    .icon {
+        right: 10px;
+    }
+
+    .navbar-nav a {
+        padding: 0.5rem;
+    }
+
+    /* עיצוב נוסף לקישורים בתפריט במסכים קטנים */
+    .navbar-nav a:hover {
+        background-color: #fecffb;
+        transform: scale(1);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/html-pages/css pages/locateDevice.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <title>Locate Your Device</title>
+</head>
+
+<body>
+    <div class="sidebar justify-content-center">
+        <a href="/html-pages/index.html" id="homeLink" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/rpvomrgr.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon> Home
+        </a>
+        <a href="personal.html" id="homeLink" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/rzsnbiaw.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon>Personal 
+        </a>
+        <a href="instructions.html" id="homeLink" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/fjqcbgke.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon>instructions
+        </a>
+        <a href="/html-pages/personal space/devices.html" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/mfdeeuho.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon>
+            Add Item
+        </a>
+        <a href="/html-pages/personal space/locateDevice.html" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/vgxjrbxm.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon> Items
+        </a>
+        <button class="btn mt-4" id="logoutButton">Logout</button>
+    </div>
+
+    <!-- Content Area -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Items List</h1>
+        <h4 class="text-center mb-4">Please wait a few seconds for the program to launch</h4>
+        <div id="cards-container" class="cards-container">
+            
+        </div>
+    </div>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" id="menuToggle">
+        <span>&#9776;</span>
+    </button>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <a href="/html-pages/index.html">Home</a>
+        <a href="personal.html">Personal Space</a>
+        <a href="instructions.html">instructions</a>
+        <a href="devices.html">Add Item</a>
+        <a href="locateDevice.html">Tracking</a>
+        <button class="btn mt-4" id="mobileLogoutButton">Logout</button>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sketch.js/0.2.0/sketch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/html-pages/firebase-init.js"></script>
+    <script type="module" src="/html-pages/firebase.js"></script>
+    <script type="module" src="/html-pages/personal space/personal.js"></script>
+
+</body>
+
+</html>

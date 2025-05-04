@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Area - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/html-pages/css pages/personal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar justify-content-center">
+        <a href="/html-pages/index.html" id="homeLink" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/rpvomrgr.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon> Home
+        </a>
+        <a href="instructions.html" id="homeLink" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/fjqcbgke.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon>instructions
+        </a>
+        <a href="/html-pages/personal space/devices.html" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/mfdeeuho.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon>
+            Add Item
+        </a>
+        <a href="/html-pages/personal space/locateDevice.html" class="d-flex align-items-center">
+            <lord-icon src="https://cdn.lordicon.com/vgxjrbxm.json" trigger="hover" stroke="bold"
+                colors="primary:#ee66aa,secondary:#242424" style="width:30px; height:30px; margin-right:8px;">
+            </lord-icon> Items
+        </a>
+        <button class="btn mt-4" id="logoutButton">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content">
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <h1 id="welcome-title">Welcome to Your Private Zone!</h1>
+                    <p>Welcome to your personal space! Here, you can easily add new items, track their activities, and
+                        personalize
+                        every aspect of your experience. This page is designed to provide all the essential information
+                        you
+                        need
+                        to
+                        get started on the right foot, ensuring you make the most out of every feature we offer</p>
+                </div>
+                <div class="col-sm-3" style="margin-left: 50px;">
+                    <img id="gif" src="/html-pages/pictures/ezgif.com-gif-maker.gif"
+                        style="width: 150px; height: 150px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+
+    <div class='container'>
+        <div class="middle-row">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Add a New Item</h5>
+                            <p class="card-text">Click here to start learning how to use your own Spotly device!</p>
+                            <a href="/html-pages/personal space/instructions.html" class="btn">instructions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Track Items</h5>
+                            <p class="card-text">Start tracking items you've added to your personal area.</p>
+                            <a href="/html-pages/personal space/locateDevice.html" class="btn">View Items</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-2">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature Updates</h5>
+                            <p class="card-text" id="lastAddedItem"></p>
+                            <a href="/html-pages/personal space/devices.html" class="btn">Add More Items</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLOATING CARD -->
+
+    <div class="container">
+        <div class="row down-row">
+            <div class="col-sm-6">
+                <div class="card large-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Daily Quote</h5>
+                        <p class="card-text" id="dailyQuote"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img class="sakura"
+                    src="/html-pages/pictures/pngtree-sakura-tree-water-color-petals-fall-png-image_6191401-removebg-preview.png"
+                    style="width:350px" height="350px">
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" id="menuToggle">
+        <span>&#9776;</span>
+    </button>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <a href="/html-pages/index.html">Home</a>
+        <a href="personal.html">Personal Space</a>
+        <a href="instructions.html">instructions</a>
+        <a href="devices.html">Add Item</a>
+        <a href="locateDevice.html">Tracking</a>
+        <button class="btn mt-4" id="mobileLogoutButton">Logout</button>
+
+    </div>
+
+    <script type="module" src="/html-pages/firebase-init.js"></script>
+    <script type="module" src="/html-pages/firebase.js"></script>
+    <script type="module" src="personal.js"> </script>
+
+
+</body>
+
+</html>

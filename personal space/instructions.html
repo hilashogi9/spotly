@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך הפעלה למוצר</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/html-pages/css pages/instructions.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <a href="/html-pages/index.html">בית</a>
+        <a href="personal.html">אזור אישי</a>
+        <a href="devices.html">הוספת חפץ</a>
+        <a href="locateDevice.html">איתור חפץ</a>
+    </div>
+
+
+
+
+    <header class="hero">
+        <h1>ברוכים הבאים למדריך המוצר!</h1>
+        <p>למדו כיצד להפעיל את המוצר שלכם בקלות ובנוחות</p>
+    </header>
+
+    <main> <!-- אלמנט ראשי בדף, בדרך כלל כולל את התוכן העיקרי של הדף -->
+        <section class="steps"> <!-- חלק שמתאר את שלבי ההפעלה -->
+            <h2>שלבים להפעלת המוצר</h2> <!-- כותרת של הסקשן שמציינת את הנושא -->
+
+            <div class="step-circle-container"> <!-- קונטיינר שמחזיק את מעגלי השלבים -->
+
+                <!-- שלב 1 -->
+                <div class="step-circle" id="step-circle1" onclick="flipCircle(this)">
+                    <!-- מעגל שמייצג את שלב 1, עם אירוע שמפעיל פונקציה בעת לחיצה -->
+
+                    <div class="front"> <!-- צד הקידמי של המעגל -->
+                        <p>שלב 1</p> <!-- כיתוב המייצג את השלב -->
+                    </div>
+
+                    <div class="back"> <!-- צד אחורי של המעגל -->
+                        <p>פתחו בזהירות את האריזה כדי להימנע מפגיעה במוצר.</p>
+                        <!-- תיאור של הפעולה שעל המשתמש לבצע בשלב זה -->
+                    </div>
+                </div>
+
+                <!-- שלב 2 -->
+                <div class="step-circle" id="step-circle2" onclick="flipCircle(this)">
+                    <!-- מעגל שמייצג את שלב 2 -->
+
+                    <div class="front"> <!-- צד הקידמי של המעגל -->
+                        <p>שלב 2</p> <!-- כיתוב המייצג את השלב -->
+                    </div>
+
+                    <div class="back"> <!-- צד אחורי של המעגל -->
+                        <p>תשמרו את "כתובת המאק" המצורפת באריזה ותעברו לעמוד "הוספת חפץ"</p>
+                        <!-- תיאור של הפעולה שעל המשתמש לבצע בשלב זה -->
+                    </div>
+                </div>
+
+                <!-- שלב 3 -->
+                <div class="step-circle" id="step-circle3" onclick="flipCircle(this)">
+                    <!-- מעגל שמייצג את שלב 3 -->
+
+                    <div class="front"> <!-- צד הקידמי של המעגל -->
+                        <p>שלב 3</p> <!-- כיתוב המייצג את השלב -->
+                    </div>
+
+                    <div class="back"> <!-- צד אחורי של המעגל -->
+                        <p>לאחר ההוספה של החפץ, תעברו לעמוד "איתור חפץ" בשביל להתחיל להשתמש!</p>
+                        <!-- תיאור של הפעולה שעל המשתמש לבצע בשלב זה -->
+                    </div>
+                </div>
+
+            </div> <!-- סיום קונטיינר מעגלי השלבים -->
+        </section> <!-- סיום הסקשן של שלבים -->
+    </main> <!-- סיום אלמנט ה-main -->
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-toggle" id="menuToggle">
+        <span>&#9776;</span>
+    </button>
+
+    <!-- Mobile Sidebar Navigation -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <a href="/html-pages/index.html">Home</a>
+        <a href="personal.html">Personal Space</a>
+        <a href="devices.html">Add Item</a>
+        <a href="locateDevice.html">Tracking</a>
+        <button class="btn mt-4" id="mobileLogoutButton">Logout</button>
+    </div>
+
+    <!-- <footer>
+        <p>© 2024 כל הזכויות שמורות למוצר שלנו</p>
+    </footer> -->
+
+    <script>
+        function flipCircle(circle) {
+            circle.classList.toggle('flipped');
+        }
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("responsive");
+        }
+
+
+    </script>
+    <script type="module" src="personal.js"> </script>
+</body>
+
+</html>
